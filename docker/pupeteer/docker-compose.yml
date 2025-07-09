@@ -1,0 +1,17 @@
+services:
+  puppeteer-n8n:
+    build: .
+    # image: docker.n8n.io/n8nio/n8n:latest
+    ports:
+      - "5679:5678"
+    restart: always 
+    cap_add:
+      - SYS_ADMIN
+    environment:
+      - GENERIC_TIMEZONE=Asia/Seoul
+
+    volumes:
+      - ./n8n:/home/node/.n8n
+
+networks:
+  n8n_net:
