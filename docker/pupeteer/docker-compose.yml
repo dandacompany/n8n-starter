@@ -3,7 +3,7 @@ services:
     build: .
     # image: docker.n8n.io/n8nio/n8n:latest
     ports:
-      - "5679:5678"
+      - "5678:5678"
     restart: always 
     cap_add:
       - SYS_ADMIN
